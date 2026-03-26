@@ -74,7 +74,7 @@ function OrganizationLevelSelect({
       <Label className="mb-2">
         {t(
           currentLevel
-            ? `SYSTEM__govt_org_type__${currentLevel.metadata?.govt_org_type}`
+            ? `SYSTEM__govt_org_type__${currentLevel.metadata?.govt_org_type || "default"}`
             : index === 0
               ? "SYSTEM__govt_org_type__default"
               : `SYSTEM__govt_org_type__${previousLevel?.metadata?.govt_org_children_type || "default"}`,
